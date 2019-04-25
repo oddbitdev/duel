@@ -1,0 +1,4 @@
+packages:
+- .
+extra-deps: null
+resolver: lts-12.26
