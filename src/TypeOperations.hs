@@ -86,7 +86,7 @@ exclusiveResourceCombinations :: Player -> [[Resource]]
 exclusiveResourceCombinations p =
   sequence
     $  filter
-         (\a -> length a > 0)
+    (not . null)
          [ extractExclusives $ buildableProductionUnit $ cardBuildable c
          | c <- playerDeck p
          ]
